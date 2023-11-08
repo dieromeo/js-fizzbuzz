@@ -2,23 +2,44 @@
 Creo un ciclo for che iteri partendo da 1 fino a =< 100, e che inizialmente stampi il risultato in console.
 */
 
+const divContainer = document.querySelector("div.dr-container");
+console.log(divContainer);
+
+
 for (let i = 1; i <= 100; i++) {
 
-    if (i % 3 === 0 && !(i % 5 === 0)) {
+    const divElement = document.createElement('div'); // creo 'i' div
+
+    if (i % 3 === 0 && !(i % 5 === 0)) { //verifico che sia modulo tre ma non 5
         console.log(i, 'Fizz')
+        divElement.append("Fizz");
+        divContainer.append(divElement);
+        divElement.classList.add("fizz-div");
     }
 
-    else if (i % 5 === 0 && !(i % 3 === 0)) {
+    else if (i % 5 === 0 && !(i % 3 === 0)) { //verifico che sia modulo 5 ma non 3
         console.log(i, 'Buzz')
+        divElement.append("Buzz");
+        divContainer.append(divElement);
+        divElement.classList.add("buzz-div");
     }
 
-    else if (i % 3 === 0 && i % 5 === 0) {
+    else if (i % 3 === 0 && i % 5 === 0) { //verifico che sia modulo di entrambi
         console.log(i, 'FizzBuzz')
+        divElement.append("FizzBuzz");
+        divContainer.append(divElement);
+        divElement.classList.add("fizz-buzz-div");
     }
 
-    else if (!(i % 3 === 0 || i % 5 === 0)) {
+    else if (!(i % 3 === 0 || i % 5 === 0)) { //verifico che non sia modulo di nessuno
         console.log(i);
+        divElement.append(i);
+        divContainer.append(divElement);
+        divElement.classList.add("number-i-div");
     }
+
+
+
 
 
 }

@@ -1,0 +1,23 @@
+/*
+-----------
+COMMON
+-----------
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--div-secondary);
+}
+
+div.fizz-div,
+div.buzz-div,
+div.fizz-buzz-div,
+div.number-i-div {
+    width: 4.375rem;
+    height: 4.375rem;
+    margin: 1.875rem .9375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+}

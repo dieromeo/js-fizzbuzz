@@ -1,0 +1,32 @@
+/*
+------------
+IMPORT
+------------
+*/
+
+@import url('_partials/reset.css');
+@import url('_partials/variables.css');
+@import url('_partials/common.css');
+
+div.dr-container {
+    background-color: var(--bg-main);
+}
+
+div.fizz-div {
+    background-color: var(--div-primary);
+}
+
+
+div.buzz-div {
+    background-color: var(--div-secondary);
+    color: aliceblue;
+}
+
+div.fizz-buzz-div {
+    background-color: var(--div-both);
+}
+
+div.number-i-div {
+    background-color: var(--div-number);
+    border-radius: 50%;
+}
