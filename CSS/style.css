@@ -30,3 +30,77 @@ div.number-i-div {
     background-color: var(--div-number);
     border-radius: 50%;
 }
+
+/* hover effect */
+
+div.fizz-div:hover {
+    animation-name: horizontal-shaking;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
+
+div.buzz-div:hover {
+    width: 5.3125rem;
+    height: 5.3125rem;
+    transition: all 0.3s;
+}
+
+div.fizz-buzz-div:hover {
+    animation-name: jump-shaking;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+}
+
+/* Animazioni */
+
+@keyframes horizontal-shaking {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0),
+    }
+}
+
+@keyframes jump-shaking {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateY(-9px)
+    }
+
+    35% {
+        transform: translateY(-9px) rotate(17deg)
+    }
+
+    55% {
+        transform: translateY(-9px) rotate(-17deg)
+    }
+
+    65% {
+        transform: translateY(-9px) rotate(17deg)
+    }
+
+    75% {
+        transform: translateY(-9px) rotate(-17deg)
+    }
+
+    100% {
+        transform: translateY(0) rotate(0)
+    }
+}
