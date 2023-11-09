@@ -10,38 +10,31 @@ for (let i = 1; i <= 100; i++) {
 
     const divElement = document.createElement('div'); // creo 'i' div
 
-    if (i % 3 === 0 && !(i % 5 === 0)) { //verifico che sia modulo tre ma non 5
-        console.log(i, 'Fizz')
-        divElement.append("Fizz");
-        divContainer.append(divElement);
-        divElement.classList.add("fizz-div");
-    }
-
-    else if (i % 5 === 0 && !(i % 3 === 0)) { //verifico che sia modulo 5 ma non 3
-        console.log(i, 'Buzz')
-        divElement.append("Buzz");
-        divContainer.append(divElement);
-        divElement.classList.add("buzz-div");
-    }
-
-    else if (i % 3 === 0 && i % 5 === 0) { //verifico che sia modulo di entrambi
+    if (i % 15 === 0) { //verifico che sia modulo di entrambi
         console.log(i, 'FizzBuzz')
         divElement.append("FizzBuzz");
-        divContainer.append(divElement);
         divElement.classList.add("fizz-buzz-div");
     }
 
-    else if (!(i % 3 === 0 || i % 5 === 0)) { //verifico che non sia modulo di nessuno
+    else if (i % 3 === 0) { //verifico che sia modulo tre ma non 5
+        console.log(i, 'Fizz')
+        divElement.append("Fizz");
+        divElement.classList.add("fizz-div");
+    }
+
+    else if (i % 5 === 0) { //verifico che sia modulo 5 ma non 3
+        console.log(i, 'Buzz')
+        divElement.append("Buzz");
+        divElement.classList.add("buzz-div");
+    }
+
+    else { //verifico che non sia modulo di nessuno
         console.log(i);
         divElement.append(i);
-        divContainer.append(divElement);
         divElement.classList.add("number-i-div");
     }
 
-
-
-
-
+    divContainer.append(divElement);
 }
 
 /*
